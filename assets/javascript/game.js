@@ -20,7 +20,17 @@ var randomWordToGuess= wordList[randomIndex];
 console.log(randomWordToGuess);
 
 // need to generate underscores for the length of randomWordToGuess
+ var wordDashes= [];
+// for (let randomIndex = 0; i < randomIndex.length; randomIndex++) {
+        wordDashes[randomWordToGuess]="_";   
+ for (let randomIndex = 0; randomIndex < randomWordToGuess.length; randomIndex++) {
+    const element = randomWordToGuess[randomIndex];
+console.log(wordDashes);
+};
 
+    
+// }
+// console.log(wordDashes);
 
 
 // https://stackoverflow.com/questions/47787313/javascript-creating-a-guess-the-word-game

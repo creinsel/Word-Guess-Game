@@ -45,7 +45,6 @@
   width:70px;
   height:70px;
   border: dotted red 2px;
-  align: center;
 }
 .row{
   display:flex;
@@ -103,4 +102,4 @@ header{
   25%, 75%{
     font-size:20px;
 }
- 
+}
