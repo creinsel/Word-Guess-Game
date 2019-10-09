@@ -30,7 +30,12 @@ console.log(wordDashes);
 };
 
 // create array to store used words and another to store used letters
+    //lettersGuessed=store letters
+    //
+
 //display dashes in current word
+    // document.getElementById("current-word")
+    
 // create function to capture keystrokes
 
 
