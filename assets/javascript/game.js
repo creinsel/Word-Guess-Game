@@ -27,15 +27,47 @@ console.log(randomWordToGuess);
  for (let randomIndex = 0; randomIndex < randomWordToGuess.length; randomIndex++) {
      const element=randomWordToGuess[randomIndex];
 console.log(wordDashes);
+
+
+
+});
+
+//display dashes in current word
+    // document.getElementById("")
+
+var dashBox=document.getElementById("dash-box");
+
+wordDashes.forEach(function(dashes){
+    
+    var iDontKnow=document.createElement("display");
+
+    iDontKnow.textContent=dashes;
+
+
+    dashBox.appendChild(iDontKnow);
+    
+console.log(dashBox);
 };
+
+
+// wordDashes.textContent=" ";
+
+// var emptySpace=document.createElement("display")
+// emptySpace.textContent=" ";
+
+// wordDashes.appendChild(emptySpace);
+
+// wordDashes.for(listItem => {
+//     const emptySpace=document.createElement("display");
+//     emptySpace.textContent=listItem;
+//     wordDashes.appendChild(emptySpace);
+// });
 
 // create array to store used words and another to store used letters
     //lettersGuessed=store letters
-    //
+    //can use .push to modify?
 
-//display dashes in current word
-    // document.getElementById("current-word")
-    
+
 // create function to capture keystrokes
 
 

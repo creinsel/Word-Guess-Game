@@ -35,6 +35,11 @@
   display:flex-wrap;
   padding: 15px; 
 }
+#dash-box{
+  display:inline-block;
+  text:white;
+  
+}
 .current-word{
   width:700px;
   text-align:center;
