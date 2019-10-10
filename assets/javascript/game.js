@@ -11,7 +11,7 @@
     "jazzercise",
     "hate"
     ];
-
+    const htmlNode= document.getElementById("container");
     //make random wordbank chooser--> chooses word from list randomly
     var randomIndex = Math.floor(Math.random() * wordList.length);
     console.log(randomIndex);
@@ -20,7 +20,7 @@
     var randomWordToGuess= wordList[randomIndex];
     console.log(randomWordToGuess);
 
-    const htmlNode= document.getElementById("container");
+    
     // need to generate underscores for the length of randomWordToGuess
     var wordDashes=[];
    
@@ -29,16 +29,16 @@
         wordDashes.push("_");
         wordDashes.toString();
 
-    document.getElementById("dash-box").innerHTML=wordDashes;
+    
     console.log(wordDashes);
     };
-    
+    document.getElementById("dash-box").innerHTML= " " +wordDashes.join(" ");
 //records keystrokes
     document.onkeyup=function(event){
     var userGuess= event.key;
     console.log(userGuess);
 
-   // if userGuess===(letter in random randomWordToGuess){
+   // if userGuess===(letter in randomWordToGuess){
        //fill in corresponding letter
        //else{
     //        lettersGuessed.push(userGuess);
