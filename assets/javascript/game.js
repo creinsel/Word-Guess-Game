@@ -5,13 +5,12 @@
     "christmas",
     "green",
     "max",
-    "mt crumpit",
-    "cindy lou",
     "heart",
     "jazzercise",
     "hate"
     ];
     const htmlNode= document.getElementById("container");
+
     //make random wordbank chooser--> chooses word from list randomly
     var randomIndex = Math.floor(Math.random() * wordList.length);
     console.log(randomIndex);
@@ -22,7 +21,9 @@
 
     
     // need to generate underscores for the length of randomWordToGuess
+    // wordDashes is array to store underscores
     var wordDashes=[];
+    
    
     for (let randomIndex = 0; randomIndex < randomWordToGuess.length; randomIndex++) {
             const element= randomWordToGuess[randomIndex];
