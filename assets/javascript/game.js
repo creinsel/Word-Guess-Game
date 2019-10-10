@@ -23,20 +23,28 @@
     const htmlNode= document.getElementById("container");
     // need to generate underscores for the length of randomWordToGuess
     var wordDashes=[];
-
-        wordDashes[randomWordToGuess]="_";   
+   
     for (let randomIndex = 0; randomIndex < randomWordToGuess.length; randomIndex++) {
             const element= randomWordToGuess[randomIndex];
         wordDashes.push("_");
-        wordDashes.toString()
+        wordDashes.toString();
 
     document.getElementById("dash-box").innerHTML=wordDashes;
     console.log(wordDashes);
     };
     
-
+//records keystrokes
     document.onkeyup=function(event){
     var userGuess= event.key;
     console.log(userGuess);
+
+   // if userGuess===(letter in random randomWordToGuess){
+       //fill in corresponding letter
+       //else{
+    //        lettersGuessed.push(userGuess);
+    //        lettersGuessed.toString();
+    //        guessesLeft --;
+    //    }
+   //}
 
 }
