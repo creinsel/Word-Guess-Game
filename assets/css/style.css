@@ -15,7 +15,7 @@
   z-index:2;
  
 }
-.container{
+#container{
   background-color:green;
 }
 .below-header{
@@ -36,9 +36,18 @@
   padding: 15px; 
 }
 #dash-box{
-  display:inline-block;
-  text:white;
+  align-content:"span";
   
+  
+}
+#wins{
+  text-align: center;
+}
+#guesses-left{
+  text-align: center;
+}
+#letters-guessed{
+  text-align: center;
 }
 .current-word{
   width:700px;
