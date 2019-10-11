@@ -24,28 +24,41 @@
     // wordDashes is array to store underscores
     var wordDashes=[];
     
-   
+   // for loop generates underscores in place of letters and pushes them to wordDashes array
     for (let randomIndex = 0; randomIndex < randomWordToGuess.length; randomIndex++) {
             const element= randomWordToGuess[randomIndex];
         wordDashes.push("_");
         wordDashes.toString();
 
-    
-    console.log(wordDashes);
     };
+    //displays output from above on html
     document.getElementById("dash-box").innerHTML= " " +wordDashes.join(" ");
+
+    //variables to appearon screen
+    var wins=0;
+    //document.getElementById("wins").innerHTML=wins;
+
+    var guessesLeft=10;
+   
+        document.getElementById("guesses-left").innerHTML=guessesLeft;
+    
+
+
+    var lettersGuessed= [];
+    document.getElementById("letters-guessed");
+
+    var possibleLetters=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+    
+console.log(guessesLeft);
 //records keystrokes
     document.onkeyup=function(event){
     var userGuess= event.key;
-    console.log(userGuess);
+    
+    }
+        
+            
+      
 
-   // if userGuess===(letter in randomWordToGuess){
-       //fill in corresponding letter
-       //else{
-    //        lettersGuessed.push(userGuess);
-    //        lettersGuessed.toString();
-    //        guessesLeft --;
-    //    }
-   //}
 
-}
+
+   

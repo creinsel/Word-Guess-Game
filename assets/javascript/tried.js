@@ -1,16 +1,30 @@
 // stuff that isn't working now but might later?
 
 
+console.log(lettersGuessed);
+console.log(wordDashes);
 
-// var wins=0;
-    // document.getElementById("wins").innerHTML=wins;
 
-    // var guessesLeft=10;
-    // document.getElementById("guesses-left").innerHTML=guessesLeft;
+// if userGuess===(letter in randomWordToGuess){
+   //fill in corresponding letter
+   //else{
+//        lettersGuessed.push(userGuess);
+//        lettersGuessed.toString();
+//        guessesLeft --;
+//    }
+//}
+// document.getElementById("letters-guessed").innerHTML= " " +lettersGuessed.join(" ");
+//    document.getElementById("wins").innerHTML=(wins);
+//    document.getElementById("guesses-left").innerHTML= (guessesLeft);
+// };
 
-    // var lettersGuessed= [];
-    // document.getElementById("letters-guessed")
+// if lettersGuessed.push(userGuess);
+//             lettersGuessed.toString();
+//             guessesLeft--;
 
+// (userGuess===randomWordToGuess){
+//     wordDashes.push(userGuess);
+//     wordDashes.toString();
 
     //
     // const htmlNode= document.getElementById('dash-box');
