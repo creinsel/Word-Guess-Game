@@ -25,40 +25,40 @@
     var wordDashes=[];
     
    // for loop generates underscores in place of letters and pushes them to wordDashes array
-    for (let randomIndex = 0; randomIndex < randomWordToGuess.length; randomIndex++) {
-            const element= randomWordToGuess[randomIndex];
-        wordDashes.push("_");
-        wordDashes.toString();
-
+    for (let i = 0; i < randomWordToGuess.length; i++) {
+            wordDashes[i]="_"
+        
+        //const element= randomWordToGuess[randomIndex];
+        // wordDashes.push("_");
+        // wordDashes.toString();
+    
+console.log(wordDashes)
     };
+    
+    
     //displays output from above on html
-    document.getElementById("dash-box").innerHTML= " " +wordDashes.join(" ");
+  document.getElementById("dash-box").innerHTML= " " +wordDashes.join(" ");
+
+    // will represent userGuess. No definition yet bc I want it to exist outside scope if I make a function
+    var userGuess
+ 
+    //to begin game
+    var begin= false;
 
     //variables to appearon screen
     var wins=0;
     //document.getElementById("wins").innerHTML=wins;
 
+    //represents amount of guesses user has left
     var guessesLeft=10;
    
         document.getElementById("guesses-left").innerHTML=guessesLeft;
     
 
-
+    // array to store letters user has guessed
     var lettersGuessed= [];
     document.getElementById("letters-guessed");
 
-    var possibleLetters=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-    
-console.log(guessesLeft);
-//records keystrokes
-    document.onkeyup=function(event){
-    var userGuess= event.key;
-    
-    }
-        
-            
-      
-
-
-
    
+
+    

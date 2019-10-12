@@ -31,7 +31,8 @@ console.log(wordDashes);
     // htmlNode.innerHTML=(wordDashes);
 
     
-
+// var possibleLetters=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+    
 
     // var emptySpace=document.createElement("display")
             // emptySpace.textContent=" ";
@@ -58,4 +59,37 @@ console.log(wordDashes);
 
 
 
+   
     
+  
+// // trying to get guesses to replaces dashes for corresponding letter
+// function replaceDash(char, str){
+//     for (let j = 0; j < str.length; j++) {
+//         if(char===str[j]){
+//             wordDashes.splice(j,1,char)
+       
+       
+       
+//         };
+//    document.getElementById("dash-box").innerHTML=wordDashes.splice(j,wordDashes.length,char);
+   
+//     }; 
+// };
+  
+
+
+// // document.onkeyup=function(event){
+// //     var userGuess= event.key;
+
+// //     //replaceDash(userGuess, wordDashes);
+
+// //     console.log(userGuess)};
+
+// // document.onkeyup(
+
+// //     replaceDash(userGuess, wordDashes)
+// // )
+
+   
+        
+        
