@@ -92,4 +92,11 @@ console.log(wordDashes);
 
    
         
+        function oneToN(num){
+            var total=0;
+            for (let index = 1; index <= num; index++) {
+                total+=index;
+             return total;   
+            }
+        }
         

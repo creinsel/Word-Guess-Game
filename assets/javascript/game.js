@@ -1,4 +1,4 @@
-    //var Rules= confirm("Guess the Current Word below by typing any letter. You have 10 tries for each word.");
+    //alert("Guess the Current Word below by typing any letter. You have 10 tries for each word.");
 
     var wordList=[
     "whoville",
@@ -11,6 +11,8 @@
     ];
     const htmlNode= document.getElementById("container");
 
+
+    function pickWord(){
     //make random wordbank chooser--> chooses word from list randomly
     var randomIndex = Math.floor(Math.random() * wordList.length);
     console.log(randomIndex);
@@ -33,11 +35,14 @@
         // wordDashes.toString();
     
 console.log(wordDashes)
-    };
-    
-    
     //displays output from above on html
-  document.getElementById("dash-box").innerHTML= " " +wordDashes.join(" ");
+    document.getElementById("dash-box").innerHTML= " " +wordDashes.join(" ");
+    };
+
+};
+pickWord();
+    
+ 
 
     // will represent userGuess. No definition yet bc I want it to exist outside scope if I make a function
     var userGuess
@@ -45,7 +50,7 @@ console.log(wordDashes)
     //to begin game
     var begin= false;
 
-    //variables to appearon screen
+    //user wins
     var wins=0;
     //document.getElementById("wins").innerHTML=wins;
 
