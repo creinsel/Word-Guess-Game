@@ -28,11 +28,11 @@
     
    // for loop generates underscores in place of letters and pushes them to wordDashes array
     for (let i = 0; i < randomWordToGuess.length; i++) {
-            wordDashes[i]="_"
+           // wordDashes[i]="_"
         
-        //const element= randomWordToGuess[randomIndex];
-        // wordDashes.push("_");
-        // wordDashes.toString();
+        const element= randomWordToGuess[randomIndex];
+        wordDashes.push("_");
+        wordDashes.toString();
     
 console.log(wordDashes)
     //displays output from above on html
@@ -64,6 +64,20 @@ pickWord();
     var lettersGuessed= [];
     document.getElementById("letters-guessed");
 
+    function storeLetters(letter){
+        if (lettersGuessed.indexOf(letter)===-1){
+            lettersGuessed.push(letter);
+            guessesLeft--;
+        }
+        else{
+            for (let i = 0; i < randomWordToGuess.length; i++){
+                if(letter===randomWordToGuess[i]){
+                    wordDashes[i]=letter;
+                }
+            }
+
+        }
+    };
    
 
     
