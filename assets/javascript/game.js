@@ -60,10 +60,11 @@ pickWord();
         document.getElementById("guesses-left").innerHTML=guessesLeft;
     
 
-    // array to store letters user has guessed
+    // array to store letters user has guessed that are not in the current word
     var lettersGuessed= [];
     document.getElementById("letters-guessed");
 
+    // function to push letters to the correct spot
     function storeLetters(letter){
         if (lettersGuessed.indexOf(letter)===-1){
             lettersGuessed.push(letter);
