@@ -10,9 +10,12 @@
     "hate"
     ];
     const htmlNode= document.getElementById("container");
+   
+     // need to generate underscores for the length of randomWordToGuess
+    // wordDashes is array to store underscores
+    var wordDashes=[];
 
-
-    function pickWord(){
+   
     //make random wordbank chooser--> chooses word from list randomly
     var randomIndex = Math.floor(Math.random() * wordList.length);
     console.log(randomIndex);
@@ -22,25 +25,23 @@
     console.log(randomWordToGuess);
 
     
-    // need to generate underscores for the length of randomWordToGuess
-    // wordDashes is array to store underscores
-    var wordDashes=[];
     
    // for loop generates underscores in place of letters and pushes them to wordDashes array
     for (let i = 0; i < randomWordToGuess.length; i++) {
-           // wordDashes[i]="_"
+            wordDashes[i]="_"
         
-        const element= randomWordToGuess[randomIndex];
-        wordDashes.push("_");
-        wordDashes.toString();
+        // const element= randomWordToGuess[randomIndex];
+        // wordDashes.push("_");
+        // wordDashes.toString();
     
-console.log(wordDashes)
+// console.log(wordDashes)
     //displays output from above on html
     document.getElementById("dash-box").innerHTML= " " +wordDashes.join(" ");
     };
 
-};
-pickWord();
+   
+
+
     
  
 
@@ -65,20 +66,32 @@ pickWord();
     document.getElementById("letters-guessed");
 
     // function to push letters to the correct spot
-    function storeLetters(letter){
-        if (lettersGuessed.indexOf(letter)===-1){
-            lettersGuessed.push(letter);
+    function storeLetters(userGuess){
+        if (lettersGuessed.indexOf(userGuess)===-1){
+            lettersGuessed.push(userGuess);
             guessesLeft--;
+            
+            document.getElementById("letters-guessed").innerHTML=lettersGuessed.push(userGuess);
+            document.getElementById("guesses-left").innerHTML=guessesLeft;
         }
         else{
             for (let i = 0; i < randomWordToGuess.length; i++){
-                if(letter===randomWordToGuess[i]){
-                    wordDashes[i]=letter;
+                if(userGuess===randomWordToGuess[i]){
+                    wordDashes[i]=userGuess;
+                    return userGuess;
+                    document.getElementById("dash-box").innerHTML=wordDashes.join(" ");
                 }
             }
 
         }
+        
     };
-   
 
+    document.onkeyup=function(event){
+    var userGuess= event.key;{
+     storeLetters();
+         };
+         console.log(userGuess);
+};
     
+

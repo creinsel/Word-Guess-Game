@@ -78,8 +78,7 @@ console.log(wordDashes);
   
 
 
-// // document.onkeyup=function(event){
-// //     var userGuess= event.key;
+
 
 // //     //replaceDash(userGuess, wordDashes);
 
