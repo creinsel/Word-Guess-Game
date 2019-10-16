@@ -36,7 +36,7 @@
     
 // console.log(wordDashes)
     //displays output from above on html
-    document.getElementById("dash-box").innerHTML= " " +wordDashes.join(" ");
+    document.getElementById("dash-box").innerHTML= " " +wordDashes.join(" ");//change
     };
 
    
@@ -67,31 +67,37 @@
 
     // function to push letters to the correct spot
     function storeLetters(userGuess){
-        if (lettersGuessed.indexOf(userGuess)===-1){
-            lettersGuessed.push(userGuess);
-            guessesLeft--;
+        console.log(userGuess)
+        console.log(randomWordToGuess.indexOf(userGuess)>=0)
+        if (randomWordToGuess.indexOf(userGuess)>=0){
             
-            document.getElementById("letters-guessed").innerHTML=lettersGuessed.push(userGuess);
-            document.getElementById("guesses-left").innerHTML=guessesLeft;
-        }
-        else{
             for (let i = 0; i < randomWordToGuess.length; i++){
                 if(userGuess===randomWordToGuess[i]){
                     wordDashes[i]=userGuess;
-                    return userGuess;
-                    document.getElementById("dash-box").innerHTML=wordDashes.join(" ");
-                }
+                    console.log(wordDashes);
+            
+            
             }
+            };
+        }
+        else
+         {lettersGuessed.push(userGuess);
+            guessesLeft--;
+            
+                   // document.getElementById("dash-box").innerHTML=wordDashes.splice(i,1,userGuess);
+                     
 
         }
-        
+       
+            document.getElementById("guesses-left").innerHTML=guessesLeft; 
+            document.getElementById("letters-guessed").innerHTML=lettersGuessed;
     };
 
     document.onkeyup=function(event){
-    var userGuess= event.key;{
-     storeLetters();
-         };
-         console.log(userGuess);
+    var userGuess= event.key;
+     storeLetters(userGuess);
+        
+         
 };
     
 
