@@ -48,8 +48,6 @@
     // will represent userGuess. No definition yet bc I want it to exist outside scope if I make a function
     var userGuess
  
-    //to begin game
-    var begin= false;
 
     //user wins
     var wins=0;
@@ -82,10 +80,6 @@
         else
          {lettersGuessed.push(userGuess);
             guessesLeft--;
-            
-                   
-                     
-
         }
        
             document.getElementById("guesses-left").innerHTML=guessesLeft; 
@@ -97,5 +91,11 @@
      storeLetters(userGuess);
         
         };     
+
+        function reset(){
+            guessesleft=10;
+            lettersGuessed=[]
+            wordDashes=[]
+        }
     
 
