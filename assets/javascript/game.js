@@ -75,16 +75,15 @@
                 if(userGuess===randomWordToGuess[i]){
                     wordDashes[i]=userGuess;
                     console.log(wordDashes);
-            
-            
-            }
+                    document.getElementById("dash-box").innerHTML=wordDashes.join(" ");
+                    }
             };
         }
         else
          {lettersGuessed.push(userGuess);
             guessesLeft--;
             
-                   // document.getElementById("dash-box").innerHTML=wordDashes.splice(i,1,userGuess);
+                   
                      
 
         }
@@ -97,7 +96,6 @@
     var userGuess= event.key;
      storeLetters(userGuess);
         
-         
-};
+        };     
     
 
