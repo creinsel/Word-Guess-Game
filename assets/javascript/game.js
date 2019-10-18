@@ -49,9 +49,10 @@
     var userGuess
  
 
-    //user wins
+    //user wins and losses
     var wins=0;
-    //document.getElementById("wins").innerHTML=wins;
+    var losses=0;
+    wins.innerHTML="Wins: "+ wins;
 
     //represents amount of guesses user has left
     var guessesLeft=10;
@@ -86,16 +87,37 @@
             document.getElementById("letters-guessed").innerHTML=lettersGuessed;
     };
 
+    
+    
+
+    
+         
+    
     document.onkeyup=function(event){
     var userGuess= event.key;
      storeLetters(userGuess);
-        
-        };     
+
+        };  
 
         function reset(){
             guessesleft=10;
             lettersGuessed=[]
             wordDashes=[]
         }
+    
+        if(userGuess===randomWordToGuess){
+            wins++
+            
+        }
+        else if(lettersGuessed<1){
+            losses++
+           
+    
+    }
+
+
+
+
+        
     
 
