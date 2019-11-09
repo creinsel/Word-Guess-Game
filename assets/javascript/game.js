@@ -14,14 +14,18 @@
      // need to generate underscores for the length of randomWordToGuess
     // wordDashes is array to store underscores
     var wordDashes=[];
+    var randomWordToGuess;
+    var randomIndex;
+
+   function pickWord(){
 
    
     //make random wordbank chooser--> chooses word from list randomly
-    var randomIndex = Math.floor(Math.random() * wordList.length);
+    randomIndex = Math.floor(Math.random() * wordList.length);
     console.log(randomIndex);
 
     // randomWordToGuess is the random word chosen from the array
-    var randomWordToGuess= wordList[randomIndex];
+    randomWordToGuess= wordList[randomIndex];
     console.log(randomWordToGuess);
 
     
@@ -37,8 +41,9 @@
 // console.log(wordDashes)
     //displays output from above on html
     document.getElementById("dash-box").innerHTML= " " +wordDashes.join(" ");//change
+    
     };
-
+};
    
 
 
@@ -52,7 +57,7 @@
     //user wins and losses
     var wins=0;
     var losses=0;
-    wins.innerHTML="Wins: "+ wins;
+    
 
     //represents amount of guesses user has left
     var guessesLeft=10;
@@ -95,25 +100,46 @@
     
     document.onkeyup=function(event){
     var userGuess= event.key;
+
+    if (guessesLeft>0 && wordDashes.includes("_")){
      storeLetters(userGuess);
-
-        };  
-
-        function reset(){
-            guessesleft=10;
-            lettersGuessed=[]
-            wordDashes=[]
-        }
-    
-        if(userGuess===randomWordToGuess){
-            wins++
-            
-        }
-        else if(lettersGuessed<1){
-            losses++
-           
-    
+    }else if (guessesLeft>0 && !wordDashes.includes("_")){
+        wins++
+        wordDashes=[];
+        lettersGuessed=[];
+        guessesLeft=10;
+        pickWord();
     }
+    else {
+        losses++
+        wordDashes=[];
+        lettersGuessed=[];
+        guessesLeft=10;
+        pickWord();
+        
+    }
+        }; 
+        
+        //I am not sure why the wins and losses are not being added to the count when I run this code
+        document.getElementById("wins").innerHTML="Wins: "+ wins +"<br>"+ "Losses:"+ losses;
+        console.log(losses)
+        console.log(wins)
+
+        // function reset(){
+        //     guessesleft=10;
+        //     lettersGuessed=[]
+        //     wordDashes=[]
+        // }
+    // 
+        // if(userGuess===randomWordToGuess){
+        //     wins++
+            
+        // }
+        // else if(lettersGuessed<1){
+        //     losses++
+    // }  
+    pickWord();
+    
 
 
 
