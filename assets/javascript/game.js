@@ -104,26 +104,28 @@
     if (guessesLeft>0 && wordDashes.includes("_")){
      storeLetters(userGuess);
     }else if (guessesLeft>0 && !wordDashes.includes("_")){
-        wins++
+       
         wordDashes=[];
         lettersGuessed=[];
         guessesLeft=10;
+        wins++;
+        console.log( "Wins"+ " " +wins);
         pickWord();
     }
     else {
-        losses++
+        losses++;
+        console.log("losses"+ " "+ losses);
         wordDashes=[];
         lettersGuessed=[];
         guessesLeft=10;
         pickWord();
         
     }
+    document.getElementById("wins").innerHTML="Wins: "+ wins +"<br>"+ "Losses:"+ losses;
         }; 
         
-        //I am not sure why the wins and losses are not being added to the count when I run this code
         document.getElementById("wins").innerHTML="Wins: "+ wins +"<br>"+ "Losses:"+ losses;
-        console.log(losses)
-        console.log(wins)
+      
 
         // function reset(){
         //     guessesleft=10;
